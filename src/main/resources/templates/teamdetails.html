@@ -6,14 +6,17 @@
     <title>Document</title>
 </head>
 <body>
-    <h4>球団名</h4>
-    <span th:text="${team}"></span>
-    <h4>本拠地</h4>
-    <span th:text="${team}"></span>
-    <h4>発足</h4>
-    <span th:text="${team}"></span>
-    <h4>歴史</h4>
-    <span th:text="${team}"></span>
-    <button>戻る</button>
+    <form th:action="@{/team/back}" method="post">
+        <h4>球団名</h4>
+        <span th:text="${session.team.teamName}"></span>
+        <h4>本拠地</h4>
+        <span th:text="${session.team.headquarters}"></span>
+        <h4>発足</h4>
+        <span th:text="${session.team.inauguration}"></span>
+        <h4>歴史</h4>
+        <span th:text="${session.team.history}"></span><br>
+        <button>戻る</button>
+    </form>
+    
 </body>
 </html>

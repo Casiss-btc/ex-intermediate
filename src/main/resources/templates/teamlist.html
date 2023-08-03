@@ -7,8 +7,8 @@
 </head>
 <body>
     <h3>野球チーム一覧</h3>
-    <form th:action="" th:each="team: ${teamList}">
-        <a th:href="@{team}"></a><br>
+    <form th:each="team: ${session.teamList}">
+        <a th:text="${team.teamName}" th:href="@{'/team/showDetail?id='+${team.id}}"></a><br>
     </form>
 </body>
 </html>
